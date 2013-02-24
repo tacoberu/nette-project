@@ -1,0 +1,370 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	}
+
+body {
+	font: 14px/1.5 "Trebuchet MS", "Geneva CE", lucida, sans-serif;
+	color: #333;
+	background-color: #fff;
+	background-image: url(/img/bg.png);
+	background-repeat: repeat-y;
+}
+
+h1, h2, h3, h4, h5 {
+/*	font-family: Georgia,Times New Roman,serif;*/
+	letter-spacing: -0.03em;
+	}
+
+h1 {
+	font-size: 1.9em;
+	color: #3484D2;
+	width: 100%;
+	border-bottom: 1px solid #3484D2;
+	padding: 0 1em 0.4em 12px;
+	margin-left: -12px;
+	}
+
+h2 {
+	font-size: 1.2em;
+	color: #3484D2;
+	border-bottom: 1px solid #BADFFD;
+	margin-right: 15px;
+	}
+h3 {
+	font-size: 1.1em;
+	color: #3484D2;
+	margin-bottom: 7px;
+	}
+
+#content, #head, #foot {
+/*	width: 770px;*/
+	margin: 0 auto;
+	}
+
+#head {
+	background-color: #2F5B87;
+	color: white;
+	padding: 0.5em 2em;
+	height: 44px;
+	}
+
+#head a,
+#head a:hover {
+	color: white;
+	}
+
+#navigation {
+	width: 300px;
+	position: absolute;
+	padding: 1em 0.5em;
+	}
+
+#navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 0 15px;
+	}
+#navigation div.actions,
+#navigation div.box {
+	border-bottom: 1px solid #ADD4FB;
+	padding: 0px 0 15px;
+	margin: 0;
+	}
+#navigation div.actions h3,
+#navigation div.box h3 {
+	padding: 4px 15px;
+	margin: 0;
+	}
+
+
+#content {
+/*	width: 100%;*/
+/*	width: 870px;*/
+	margin-left: 322px;
+	border-bottom: 322px;
+/*	border: 1px solid red;*/
+	}
+
+#foot {
+	width: 270px;
+	height: 200px;
+	}
+
+
+
+a {
+	color: #000080;
+	}
+
+
+
+#logo {
+	margin: 2px;
+	float: left;
+	font-size: 190%;
+	}
+#logged-in {
+	float: right;
+	font-size: 90%;
+	}
+
+div.flash {
+	background: #FFFFDD;
+	border: 1px solid #FFD700;
+	padding: 1em;
+	margin: 1em 0;
+	}
+
+td, th {
+	vertical-align: top;
+	}
+
+/*------------------------------------------------------------------*/
+
+
+form {
+	max-width: 500px;
+	padding: .8em 1.6em;
+	background-color: #EEE;
+	border: solid 1px #ADD4FB;
+	}
+
+form input {
+	margin: 2px 0;
+	font-size: 100%;
+	}
+
+form input.default {
+	font-weight: bold;
+	font-size: 105%;
+}
+
+form input.text {
+	padding: 4px 2px;
+	border: solid 1px #add4fb;
+	min-width: 200px;
+}
+
+form label {
+	width: 100px;
+	display: block;
+	text-align: right;
+	margin-right: 5px;
+	font-weight: normal;
+}
+
+form .required label {
+	font-weight: bold;
+}
+
+fieldset {
+	border: solid 1px #add4fb;
+	}
+
+ul.error {
+	border: 1px solid gray;
+	color: red;
+	}
+
+.warn {
+	color: red;
+	}
+
+
+/**
+ * Gridito CSS
+ */
+
+/* flashes */
+div.gridito-flash {
+	background: #FFFFDD;
+	border: 1px solid #FFD700;
+	padding: 1em;
+	margin: 1em 0;
+	}
+div.gridito-flash .ui-icon {
+	float: left;
+	margin-right: 0.5em;
+	}
+.ui-state-error {
+	color: red;
+	font-weight: bold;
+	}
+
+/* toolbar */
+.gridito-toolbar {
+	margin-bottom: 1em;
+}
+.gridito-toolbar .ui-button {
+	margin-right: 0.5em;
+}
+
+/* table */
+.gridito-table {
+	border-collapse: collapse;
+/*	width: 100%;*/
+}
+.gridito-table th {
+	padding: 0.5em;
+	text-align: left;
+}
+.gridito-table td {
+	padding: 0.5em;
+	border: 1px solid #BBB;
+}
+.gridito-table .ui-state-hover .gridito-cell {
+	font-weight: normal;
+}
+.gridito-actioncell .ui-button {
+	margin: 0 0.5em 0 0;
+}
+.gridito-actioncell .ui-button:first-child {
+	margin-left: 0;
+}
+.gridito-actioncell {
+	text-align: center;
+}
+
+/* th */
+.gridito-table th .gridito-sorting {
+	float:right;
+	margin-left: 0.5em;
+	position: relative;
+	top: 0.2em;
+}
+.gridito-table th .gridito-sorting .ui-icon {
+	opacity: 0.5
+}
+.gridito-table th:hover .gridito-sorting .ui-icon, .gridito-table th .gridito-sorting .ui-icon.ui-icon-triangle-1-s, .gridito-table th .gridito-sorting .ui-icon.ui-icon-triangle-1-n {
+	opacity: 1
+}
+
+/* paginator */
+.gridito-paginator {
+	margin-top: 1em;
+	}
+
+.gridito form {
+	background-color: transparent;
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0 none;
+	}
+
+table.gridito-table {
+	padding: 0;
+	margin: 0;
+	border-collapse:collapse;
+/*	width: 100%;*/
+	}
+
+table.gridito-table td, table.gridito-table th {
+	background: #fff;
+	border: 1px solid #add4fb;
+	padding: 6px 6px 6px 12px;
+}
+
+table.gridito-table th {
+	color: #7a7772;
+	background-color: #EEE;
+	text-align: left;
+	font-weight: normal;
+	font-size: 80%;
+}
+
+table.gridito-table th.gridito-actions {
+	width: 80px;
+}
+
+table.gridito-table .alt td {
+	background: #f8f8f0;
+}
+
+a.gridito-button {
+	padding: 0 4px;
+	}
+
+table.gridito-table td.html-content {
+	padding: 0 0 0 0;
+	}
+
+
+
+
+/** Detail prvku. */
+table.detail {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-color: gray;
+	max-width: 500px;
+	margin: 5px 0;
+	}
+
+table.detail td, table.detail th {
+	padding: 4px;
+	margin: 0;
+	padding: 6px 6px 6px 12px;
+	border: 1px solid #CCC;
+	}
+
+table.detail th {
+	width: 20%;
+	color: #7a7772;
+	background-color: #EEE;
+	font-weight: normal;
+	font-size: 80%;
+	}
+
+table.detail caption, table.detail th {
+	text-align: left;
+	}
+
+
+/** Dokumentace **/
+table.params,
+table.define {
+	border: 1px solid #BADFFD;
+	color: #595959;
+	border-collapse: collapse;
+	}
+
+table.define th {
+	width: 140px;
+	text-align: left;
+	}
+
+table.define th,
+table.define td {
+	border: 1px solid #BADFFD;
+	color: #595959;
+	border-collapse: collapse;
+	padding: 6px;
+	}
+
+table.define td.params {
+	padding: 0;
+	}
+
+table.params {
+	margin: -1px;
+	}
+
+
+code {
+	font-size: 12px;
+	}
+
+code.sample {
+	font-size: 12px;
+	display: block;
+	padding: 5px 10px;
+	white-space: pre;
+	}
+code.sample {
+	background-color: #2A2A2A;
+	color: #ABDBDE;
+	border-radius: 5px 5px 5px 5px;
+	}

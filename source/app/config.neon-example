@@ -1,0 +1,75 @@
+common:
+	parameters:
+
+
+	php:
+		date.timezone: Europe/Prague
+		# zlib.output_compression: yes
+
+
+	nette:
+		application:
+			errorPresenter: Error
+			mapping:
+				*: App\*Module\*Presenter
+
+		session:
+			expiration: 14 days
+
+		databaseadmin:
+			username: superadmin
+			password: heslo
+
+		databaseuser:
+			driver: postgre
+			host: localhost
+			username: tacoberu
+			password: tacoberu
+			database: ---
+			lazy: TRUE
+
+
+	extensions:
+		events: Kdyby\Events\DI\EventsExtension
+
+
+	services:
+#		user: App\User
+#		authenticator: @user
+		routerFactory: App\RouterFactory
+		router: @routerFactory::createRouter
+
+
+	factories:
+
+
+
+production < common:
+	nette:
+		debugger:
+			email: taco@taco-beru.name
+			strictMode: TRUE
+
+
+
+development < common:
+	nette:
+		application:
+			debugger: true
+
+		routing:
+			debugger: true
+
+		security:
+			debugger: true
+
+		container:
+			debugger: true
+
+		debugger:
+			strictMode: TRUE
+			browser: google-chrome
+
+		database:
+			password: heslo
+			profiler: TRUE

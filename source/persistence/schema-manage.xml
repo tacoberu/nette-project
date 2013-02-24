@@ -1,0 +1,36 @@
+<!--	verze služby	- určuje různé implementační posuny v rámci instalační služby. Prostě zpětnou kompatabilitu. -->
+<schema-manage version="0.9" replace-content="config.php">
+
+
+	<!-- co a kam se bude logovat - defaultně by se mělo ukládat do systémového logu. -->
+	<log>system-default</log>
+
+	<!-- kde jsou umístěny soubory s sql - defaultně je to adresáři s konfiguračním souborem. -->
+	<repository>.</repository>
+
+	<!-- kam se budou ukládat snapshoty - defaultně do tmp -->
+	<snapshots>var/</snapshots>
+
+	<!-- Přístupy admin pro vytvoření db, user pro běžné změny, a případně můžou být další uživatelé. -->
+	<access>
+		<database type="admin" login="superadmin" password="alfarome" />
+		<database type="user" login="tacoberu" password="tacoberu" />
+	</access>
+
+	<!-- způsob verzování fce | table | něco jiného -->
+	<versioning-method>function</versioning-method>
+
+
+	<!-- Hodnoty připojení k db -->
+	<schema>
+		<!-- jaká databáze se používá -->
+		<engine>postgresql</engine>
+		<host>localhost</host>
+		<port>5432</port>
+		<database>mikes_azcil</database>
+		<charset>utf8</charset>
+	</schema>
+
+
+</schema-manage>
+
