@@ -37,18 +37,5 @@ $configurator->createRobotLoader()
 $configurator->addConfig(__DIR__ . '/config.neon');
 $container = $configurator->createContainer();
 
-// Setup router using mod_rewrite detection
-//if (function_exists('apache_get_modules') && in_array('mod_rewrite', apache_get_modules())) {
-	$container->router[] = new Route('index.php', 'Front:Dashboard:default', Route::ONE_WAY);
-
-	$container->router[] = new Route('<presenter>/<action>/<id>', array(
-        'presenter' => 'Dashboard',
-        'action' => 'default',
-        'id' => NULL));
-
-//} else {
-//	$container->router = new SimpleRouter('Dashboard:default');
-//}
-
 // Run the application!
 $container->application->run();

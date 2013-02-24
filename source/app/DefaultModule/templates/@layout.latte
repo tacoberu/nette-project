@@ -1,0 +1,50 @@
+<html lang="{$lang}">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="{$lang}" />
+
+	<meta name="description" content="Skeleton of Nette appliacation." />
+	<meta name="copyright" content="Copyright (c) 2004, 201* Martin Takáč" />
+	<meta name="author" content="Martin Takáč; e-mail: martin@takac.name" />
+
+	<meta n:ifset="$robots" name="robots" content="{$robots}">
+
+	<title>{block #title|striptags|trim}{/block} | Nette app</title>
+
+	{block #csslink}
+	<link rel="stylesheet" type="text/css" media="screen" href="{$basePath}/css/site.css" />
+	{/block}
+
+	{block #javascriptlink}
+	<script type="text/javascript" src="{$basePath}/js/jquery.js"></script>
+	{/block}
+	<script type="text/javascript">
+	//<![CDATA[
+	$(document).ready(function(){
+
+	{block #javascriptcode}
+	{/block}
+
+	});
+	//]]>
+	</script>
+
+</head>
+<body>
+
+	<div id="head">
+		<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+	</div>
+
+
+	<div id="content">
+		{include #content}
+	</div>
+
+
+	<div id="foot">
+		<p id="logged-in" n:if="$user->loggedIn">Signed in as {$user->identity->username}. <a n:href="Sign:out">Sign out</a></p>
+	</div>
+
+</body>
+</html>
